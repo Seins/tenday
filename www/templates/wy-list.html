@@ -1,0 +1,20 @@
+<style>
+._t {
+    font-size: 12px;
+    color: #999;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 70%;
+}
+</style>
+<ion-view view-title="主页">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="new in list" href="#app/wy/detail?url={{new.url}}">
+            <!-- <ion-item ng-repeat="playlist in playlists" href="{{playlist.url}}"> -->
+                <i class="_t">【{{new.source}}】{{new.ltitle}}</i>
+                <!-- <img src="{{playlist.picUrl}}" class="icon"/> -->
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
