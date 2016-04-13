@@ -1,0 +1,16 @@
+<ion-view view-title="Ten Day">
+    <ion-content>
+        <p style="font-size:1.2rem;text-align:center;margin:20px auto;max-width:90%;">{{_t}}</p>
+        <iframe style="display:none;" id="c" src="http://c.m.163.com/nc/special/S1460437744566.html"></iframe>
+        <div class="content">{{content}}</div>
+        <script type="text/javascript">
+        function showContent() {
+            var win = document.getElementById('c').contentWindow;
+            $(".content").html(win.document.body.innerText);
+        }
+        $(function() {
+            setTimeOut(showContent(), 1000);
+        })
+        </script>
+    </ion-content>
+</ion-view>
